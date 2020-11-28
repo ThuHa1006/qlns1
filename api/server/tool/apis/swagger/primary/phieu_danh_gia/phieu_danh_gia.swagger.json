@@ -1,0 +1,698 @@
+{
+  "tags": [{
+    "name": "phieu_danh_gia",
+    "description": "Everything about your phieu_danh_gia"
+  }],
+  "paths": {
+    "/api/v1/phieu_danh_gia": {
+      "post": {
+        "tags": [
+          "phieu_danh_gia"
+        ],
+        "summary": "Add a new phieu_danh_gia",
+        "description": "",
+        "operationId": "addphieu_danh_gia",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "phieu_danh_gia object that needs to add",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/phieu_danh_gia"
+          }
+        }],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "phieu_danh_gia"
+        ],
+        "summary": "Get list",
+        "description": "",
+        "operationId": "getphieu_danh_gia",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+            "in": "query",
+            "name": "fields",
+            "type": "String",
+            "description": "Comma seperated fields from the model"
+          },
+          {
+            "in": "query",
+            "name": "where",
+            "type": "String",
+            "description": "Where expression"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "Page size limit",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "description": "Pagination offset",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "Comma seperated sort fields",
+            "type": "string"
+          }
+
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/api/v1/phieu_danh_gia/{phieu_danh_giaId}": {
+      "get": {
+        "tags": [
+          "phieu_danh_gia"
+        ],
+        "summary": "Find phieu_danh_gia by ID",
+        "description": "Returns a single phieu_danh_gia",
+        "operationId": "getphieu_danh_giaById",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "phieu_danh_giaId",
+          "in": "path",
+          "description": "ID of phieu_danh_gia to return",
+          "required": true,
+          "type": "integer",
+          "format": "int64"
+        }],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/phieu_danh_gia"
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "phieu_danh_gia not found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "phieu_danh_gia"
+        ],
+        "summary": "Updates a phieu_danh_gia",
+        "description": "",
+        "operationId": "updatephieu_danh_gia",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+            "name": "phieu_danh_giaId",
+            "in": "path",
+            "description": "ID of phieu_danh_gia to return",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "phieu_danh_gia object that needs to be added to the store",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/phieu_danh_gia"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "phieu_danh_gia"
+        ],
+        "summary": "Deletes a phieu_danh_gia",
+        "description": "",
+        "operationId": "deletephieu_danh_gia",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "phieu_danh_giaId",
+          "in": "path",
+          "description": "ID of phieu_danh_gia to return",
+          "required": true,
+          "type": "integer",
+          "format": "int64"
+        }],
+        "responses": {
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "phieu_danh_gia not found"
+          }
+        }
+      }
+    },
+
+
+    "/api/v1/phieu_danh_gia/bulk": {
+      "post": {
+        "tags": [
+          "phieu_danh_gia"
+        ],
+        "summary": "Bulk phieu_danh_gia insert",
+        "description": "",
+        "operationId": "bulkphieu_danh_giaInsert",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "phieu_danh_gia objects",
+          "required": true,
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/phieu_danh_gia"
+            }
+          }
+        }],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "phieu_danh_gia"
+        ],
+        "summary": "Updates a phieu_danh_gia",
+        "description": "",
+        "operationId": "updatephieu_danh_gia",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "phieu_danh_gia objects with id",
+          "required": true,
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/phieu_danh_gia"
+            }
+          }
+        }],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "phieu_danh_gia"
+        ],
+        "summary": "Deletes a phieu_danh_gia",
+        "description": "",
+        "operationId": "deletephieu_danh_gia",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "phieu_danh_gia objects contains id",
+          "required": true,
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/phieu_danh_gia"
+            }
+          }
+        }],
+        "responses": {
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "phieu_danh_gia not found"
+          }
+        }
+      }
+    },
+    "/api/v1/phieu_danh_gia/findOne": {
+      "get": {
+        "tags": [
+          "phieu_danh_gia"
+        ],
+        "summary": "Get first one from filtered data",
+        "description": "",
+        "operationId": "findOnephieu_danh_gia",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+            "in": "query",
+            "name": "fields",
+            "type": "String",
+            "description": "Comma seperated fields from the model"
+          },
+          {
+            "in": "query",
+            "name": "where",
+            "type": "String",
+            "description": "Where expression"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "Page size limit",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "description": "Pagination offset",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "Comma seperated sort fieldst",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          },
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/phieu_danh_gia"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/phieu_danh_gia/{phieu_danh_giaId}/exists": {
+      "get": {
+        "tags": [
+          "phieu_danh_gia"
+        ],
+        "summary": "Check phieu_danh_gia with provided ID exists",
+        "description": "Returns a single phieu_danh_gia",
+        "operationId": "checkphieu_danh_giaExists",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "phieu_danh_giaId",
+          "in": "path",
+          "description": "ID of phieu_danh_gia",
+          "required": true,
+          "type": "integer",
+          "format": "int64"
+        }],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/phieu_danh_gia/count": {
+      "get": {
+        "tags": [
+          "phieu_danh_gia"
+        ],
+        "summary": "Get phieu_danh_gia count",
+        "operationId": "getphieu_danh_giaCount",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "in": "query",
+          "name": "where",
+          "type": "String",
+          "description": "Where expression"
+        }],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          },
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/phieu_danh_gia/groupby/{columnName}": {
+      "get": {
+        "tags": [
+          "phieu_danh_gia"
+        ],
+        "summary": "Group by column",
+        "description": "",
+        "operationId": "phieu_danh_giaGroupByColumn",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+            "in": "path",
+            "name": "columnName",
+            "type": "String",
+            "description": "Column name"
+          },
+          {
+            "in": "query",
+            "name": "where",
+            "type": "String",
+            "description": "Where expression"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "Page size limit",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "description": "Pagination offset",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "Comma seperated sort fieldst",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          },
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/phieu_danh_gia"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/phieu_danh_gia/distribution/{columnName}": {
+      "get": {
+        "tags": [
+          "phieu_danh_gia"
+        ],
+        "summary": "",
+        "description": "",
+        "operationId": "phieu_danh_giaDistribution",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "in": "path",
+          "name": "columnName",
+          "type": "String",
+          "description": "Column name"
+        }, {
+          "in": "query",
+          "name": "min",
+          "description": "min value",
+          "type": "integer",
+          "format": "int64"
+        }, {
+          "in": "query",
+          "name": "max",
+          "description": "max value",
+          "type": "integer",
+          "format": "int64"
+        }, {
+          "in": "query",
+          "name": "step",
+          "description": "step value",
+          "type": "integer",
+          "format": "int64"
+        }, {
+          "in": "query",
+          "name": "steps",
+          "description": "steps value",
+          "type": "integer",
+          "format": "int64"
+        }, {
+          "in": "query",
+          "name": "func",
+          "description": "comma separated aggregation functions",
+          "type": "string"
+        }],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          },
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/phieu_danh_gia/distinct/{columnName}": {
+      "get": {
+        "tags": [
+          "phieu_danh_gia"
+        ],
+        "summary": "Get first one from filtered data",
+        "description": "",
+        "operationId": "phieu_danh_giaDistinct",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+            "in": "path",
+            "name": "columnName",
+            "type": "String",
+            "description": "Column name"
+          },
+          {
+            "in": "query",
+            "name": "where",
+            "type": "String",
+            "description": "Where expression"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "Page size limit",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "description": "Pagination offset",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "Comma seperated sort fieldst",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          },
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/phieu_danh_gia/aggregate/{columnName}": {
+      "get": {
+        "tags": [
+          "phieu_danh_gia"
+        ],
+        "summary": "Get first one from filtered data",
+        "description": "",
+        "operationId": "phieu_danh_giaAggregate",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+            "in": "path",
+            "name": "columnName",
+            "type": "String",
+            "description": "Column name"
+          },
+          {
+            "in": "path",
+            "name": "fields",
+            "type": "String",
+            "description": "Column name"
+          },
+          {
+            "in": "path",
+            "name": "func",
+            "type": "String",
+            "description": "Comma seperated aggregate functions"
+          },
+          {
+            "in": "query",
+            "name": "having",
+            "type": "String",
+            "description": "Having expression"
+          },
+          {
+            "in": "query",
+            "name": "fields",
+            "type": "String",
+            "description": "Comma seperated fields from the model"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "Page size limit",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "description": "Pagination offset",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "Comma seperated sort fields",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          },
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/phieu_danh_gia"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "phieu_danh_gia": {
+      "type": "object",
+      "properties": {
+        "ma": {
+          "type": "integer",
+          "nullable": false
+        },
+        "ma_nhan_vien": {
+          "type": "integer",
+          "nullable": false
+        },
+        "ngay": {
+          "type": "string"
+        },
+        "link": {
+          "type": "string"
+        },
+        "ngay_tao": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

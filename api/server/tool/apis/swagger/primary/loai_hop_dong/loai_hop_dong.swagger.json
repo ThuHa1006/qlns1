@@ -1,0 +1,694 @@
+{
+  "tags": [{
+    "name": "loai_hop_dong",
+    "description": "Everything about your loai_hop_dong"
+  }],
+  "paths": {
+    "/api/v1/loai_hop_dong": {
+      "post": {
+        "tags": [
+          "loai_hop_dong"
+        ],
+        "summary": "Add a new loai_hop_dong",
+        "description": "",
+        "operationId": "addloai_hop_dong",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "loai_hop_dong object that needs to add",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/loai_hop_dong"
+          }
+        }],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "loai_hop_dong"
+        ],
+        "summary": "Get list",
+        "description": "",
+        "operationId": "getloai_hop_dong",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+            "in": "query",
+            "name": "fields",
+            "type": "String",
+            "description": "Comma seperated fields from the model"
+          },
+          {
+            "in": "query",
+            "name": "where",
+            "type": "String",
+            "description": "Where expression"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "Page size limit",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "description": "Pagination offset",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "Comma seperated sort fields",
+            "type": "string"
+          }
+
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/api/v1/loai_hop_dong/{loai_hop_dongId}": {
+      "get": {
+        "tags": [
+          "loai_hop_dong"
+        ],
+        "summary": "Find loai_hop_dong by ID",
+        "description": "Returns a single loai_hop_dong",
+        "operationId": "getloai_hop_dongById",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "loai_hop_dongId",
+          "in": "path",
+          "description": "ID of loai_hop_dong to return",
+          "required": true,
+          "type": "integer",
+          "format": "int64"
+        }],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/loai_hop_dong"
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "loai_hop_dong not found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "loai_hop_dong"
+        ],
+        "summary": "Updates a loai_hop_dong",
+        "description": "",
+        "operationId": "updateloai_hop_dong",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+            "name": "loai_hop_dongId",
+            "in": "path",
+            "description": "ID of loai_hop_dong to return",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "loai_hop_dong object that needs to be added to the store",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/loai_hop_dong"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "loai_hop_dong"
+        ],
+        "summary": "Deletes a loai_hop_dong",
+        "description": "",
+        "operationId": "deleteloai_hop_dong",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "loai_hop_dongId",
+          "in": "path",
+          "description": "ID of loai_hop_dong to return",
+          "required": true,
+          "type": "integer",
+          "format": "int64"
+        }],
+        "responses": {
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "loai_hop_dong not found"
+          }
+        }
+      }
+    },
+
+
+    "/api/v1/loai_hop_dong/bulk": {
+      "post": {
+        "tags": [
+          "loai_hop_dong"
+        ],
+        "summary": "Bulk loai_hop_dong insert",
+        "description": "",
+        "operationId": "bulkloai_hop_dongInsert",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "loai_hop_dong objects",
+          "required": true,
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/loai_hop_dong"
+            }
+          }
+        }],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "loai_hop_dong"
+        ],
+        "summary": "Updates a loai_hop_dong",
+        "description": "",
+        "operationId": "updateloai_hop_dong",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "loai_hop_dong objects with id",
+          "required": true,
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/loai_hop_dong"
+            }
+          }
+        }],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "loai_hop_dong"
+        ],
+        "summary": "Deletes a loai_hop_dong",
+        "description": "",
+        "operationId": "deleteloai_hop_dong",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "loai_hop_dong objects contains id",
+          "required": true,
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/loai_hop_dong"
+            }
+          }
+        }],
+        "responses": {
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "loai_hop_dong not found"
+          }
+        }
+      }
+    },
+    "/api/v1/loai_hop_dong/findOne": {
+      "get": {
+        "tags": [
+          "loai_hop_dong"
+        ],
+        "summary": "Get first one from filtered data",
+        "description": "",
+        "operationId": "findOneloai_hop_dong",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+            "in": "query",
+            "name": "fields",
+            "type": "String",
+            "description": "Comma seperated fields from the model"
+          },
+          {
+            "in": "query",
+            "name": "where",
+            "type": "String",
+            "description": "Where expression"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "Page size limit",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "description": "Pagination offset",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "Comma seperated sort fieldst",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          },
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/loai_hop_dong"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/loai_hop_dong/{loai_hop_dongId}/exists": {
+      "get": {
+        "tags": [
+          "loai_hop_dong"
+        ],
+        "summary": "Check loai_hop_dong with provided ID exists",
+        "description": "Returns a single loai_hop_dong",
+        "operationId": "checkloai_hop_dongExists",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "loai_hop_dongId",
+          "in": "path",
+          "description": "ID of loai_hop_dong",
+          "required": true,
+          "type": "integer",
+          "format": "int64"
+        }],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/loai_hop_dong/count": {
+      "get": {
+        "tags": [
+          "loai_hop_dong"
+        ],
+        "summary": "Get loai_hop_dong count",
+        "operationId": "getloai_hop_dongCount",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "in": "query",
+          "name": "where",
+          "type": "String",
+          "description": "Where expression"
+        }],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          },
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/loai_hop_dong/groupby/{columnName}": {
+      "get": {
+        "tags": [
+          "loai_hop_dong"
+        ],
+        "summary": "Group by column",
+        "description": "",
+        "operationId": "loai_hop_dongGroupByColumn",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+            "in": "path",
+            "name": "columnName",
+            "type": "String",
+            "description": "Column name"
+          },
+          {
+            "in": "query",
+            "name": "where",
+            "type": "String",
+            "description": "Where expression"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "Page size limit",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "description": "Pagination offset",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "Comma seperated sort fieldst",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          },
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/loai_hop_dong"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/loai_hop_dong/distribution/{columnName}": {
+      "get": {
+        "tags": [
+          "loai_hop_dong"
+        ],
+        "summary": "",
+        "description": "",
+        "operationId": "loai_hop_dongDistribution",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "in": "path",
+          "name": "columnName",
+          "type": "String",
+          "description": "Column name"
+        }, {
+          "in": "query",
+          "name": "min",
+          "description": "min value",
+          "type": "integer",
+          "format": "int64"
+        }, {
+          "in": "query",
+          "name": "max",
+          "description": "max value",
+          "type": "integer",
+          "format": "int64"
+        }, {
+          "in": "query",
+          "name": "step",
+          "description": "step value",
+          "type": "integer",
+          "format": "int64"
+        }, {
+          "in": "query",
+          "name": "steps",
+          "description": "steps value",
+          "type": "integer",
+          "format": "int64"
+        }, {
+          "in": "query",
+          "name": "func",
+          "description": "comma separated aggregation functions",
+          "type": "string"
+        }],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          },
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/loai_hop_dong/distinct/{columnName}": {
+      "get": {
+        "tags": [
+          "loai_hop_dong"
+        ],
+        "summary": "Get first one from filtered data",
+        "description": "",
+        "operationId": "loai_hop_dongDistinct",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+            "in": "path",
+            "name": "columnName",
+            "type": "String",
+            "description": "Column name"
+          },
+          {
+            "in": "query",
+            "name": "where",
+            "type": "String",
+            "description": "Where expression"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "Page size limit",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "description": "Pagination offset",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "Comma seperated sort fieldst",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          },
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/loai_hop_dong/aggregate/{columnName}": {
+      "get": {
+        "tags": [
+          "loai_hop_dong"
+        ],
+        "summary": "Get first one from filtered data",
+        "description": "",
+        "operationId": "loai_hop_dongAggregate",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+            "in": "path",
+            "name": "columnName",
+            "type": "String",
+            "description": "Column name"
+          },
+          {
+            "in": "path",
+            "name": "fields",
+            "type": "String",
+            "description": "Column name"
+          },
+          {
+            "in": "path",
+            "name": "func",
+            "type": "String",
+            "description": "Comma seperated aggregate functions"
+          },
+          {
+            "in": "query",
+            "name": "having",
+            "type": "String",
+            "description": "Having expression"
+          },
+          {
+            "in": "query",
+            "name": "fields",
+            "type": "String",
+            "description": "Comma seperated fields from the model"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "Page size limit",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "description": "Pagination offset",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "Comma seperated sort fields",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          },
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/loai_hop_dong"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "loai_hop_dong": {
+      "type": "object",
+      "properties": {
+        "ma": {
+          "type": "integer",
+          "nullable": false
+        },
+        "ten": {
+          "type": "string"
+        },
+        "ghi_chu": {
+          "type": "string"
+        },
+        "ngay_tao": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Editors</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="../../plugins/summernote/summernote-bs4.min.css">
+  <!-- CodeMirror -->
+  <link rel="stylesheet" href="../../plugins/codemirror/codemirror.css">
+  <link rel="stylesheet" href="../../plugins/codemirror/theme/monokai.css">
+  <!-- SimpleMDE -->
+  <link rel="stylesheet" href="../../plugins/simplemde/simplemde.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="dist/img/logo.jpg" alt="Image Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Test</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/Ha.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Ha Vu</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item menu-open">
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>              
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Menu
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">6</span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/layout/top-nav.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>HR Records</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Department</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/boxed.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Position</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Level</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Contract<small>+ Custom Area</small></p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/fixed-topnav.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Allowance</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/fixed-footer.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Coefficients</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Files
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Staff Informations</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/advanced.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Contracts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>
+                    Decisions
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/forms/validation.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Khen thưởng</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/forms/validation.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Kỉ luật</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/forms/validation.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Khác</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tuyển dụng</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Phiếu đánh giá</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tạm ứng</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Đơn từ</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Bảo hiểm
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/charts/chartjs.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Chính sách</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/charts/flot.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Đăng kí bảo hiểm</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Tài khoản
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/tables/simple.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Thông tin tài khoản</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Đổi mật khẩu</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Báo cáo
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/tables/simple.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Nhân sự</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Bảng lương</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Nghỉ phép</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Chấm công</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="pages/gallery.html" class="nav-link">
+              <i class="nav-icon far fa-image"></i>
+              <p>
+                Log out
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Text Editors</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Text Editors</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-outline card-info">
+            <div class="card-header">
+              <h3 class="card-title">
+                Summernote
+              </h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <textarea id="summernote">
+                Place <em>some</em> <u>text</u> <strong>here</strong>
+              </textarea>
+            </div>
+            <div class="card-footer">
+              Visit <a href="https://github.com/summernote/summernote/">Summernote</a> documentation for more examples and information about the plugin.
+            </div>
+          </div>
+        </div>
+        <!-- /.col-->
+      </div>
+      <!-- ./row -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-outline card-info">
+            <div class="card-header">
+              <h3 class="card-title">
+                CodeMirror
+              </h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body p-0">
+              <textarea id="codeMirrorDemo" class="p-3">
+<div class="info-box bg-gradient-info">
+  <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
+  <div class="info-box-content">
+    <span class="info-box-text">Bookmarks</span>
+    <span class="info-box-number">41,410</span>
+    <div class="progress">
+      <div class="progress-bar" style="width: 70%"></div>
+    </div>
+    <span class="progress-description">
+      70% Increase in 30 Days
+    </span>
+  </div>
+</div>
+              </textarea>
+            </div>
+            <div class="card-footer">
+              Visit <a href="https://codemirror.net/">CodeMirror</a> documentation for more examples and information about the plugin.
+            </div>
+          </div>
+        </div>
+        <!-- /.col-->
+      </div>
+      <!-- ./row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.1.0-pre
+    </div>
+    <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- Summernote -->
+<script src="../../plugins/summernote/summernote-bs4.min.js"></script>
+<!-- CodeMirror -->
+<script src="../../plugins/codemirror/codemirror.js"></script>
+<script src="../../plugins/codemirror/mode/css/css.js"></script>
+<script src="../../plugins/codemirror/mode/xml/xml.js"></script>
+<script src="../../plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    // Summernote
+    $('#summernote').summernote()
+
+    // CodeMirror
+    CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+      mode: "htmlmixed",
+      theme: "monokai"
+    });
+  })
+</script>
+</body>
+</html>

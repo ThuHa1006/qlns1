@@ -1,0 +1,23 @@
+{
+  "name": "qlns",
+  "version": "1.0.0",
+  "description": "create project qlns with nodejs",
+  "main": "qlns.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "qlns",
+    "node",
+    "js",
+    "mysql"
+  ],
+  "author": "HA VU",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.26",
+    "mysql": "^2.18.1"
+  }
+}
